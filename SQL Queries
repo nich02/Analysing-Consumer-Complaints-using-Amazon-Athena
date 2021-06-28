@@ -1,0 +1,29 @@
+To test successful connection of my table I decided to write the following query on the Amazon Athena SQL editor. 
+SELECT * FROM consumercomplaint LIMIT =10;
+Objective 1. Display how many complaints were respondent on time
+SELECT * FROM consumercomplaint WHERE timely_response = 'Yes';
+
+Objective 2. Using SQL query get only consumer complaints that were closed with monetary relief. 
+SELECT date_received, product, issue, company, state FROM consumercomplaint WHERE company_response_to_consumer = 'Closed with monetary relief';
+
+Objective 3. Let’s understand the major channels of communication such as Web and Emails and then arrange them in ascending order. 
+SELECT date_received, product, issue, company, state, submitted_via FROM consumercomplaint WHERE submitted_via = 'Email' OR submitted_via = 'Web' ORDER BY date_received ASC;
+
+Objective 4. How many complaints were associated with Mortgage?
+SELECT COUNT (*) FROM consumercomplaint WHERE product = 'Mortgage'; 
+
+SELECT * FROM consumercomplaint WHERE issue LIKE 'Credit%';
+
+SELECT * FROM consumercomplaint WHERE date_received='06/13/2013';
+
+SELECT * FROM consumercomplaint WHERE issue LIKE 'Credit%';
+
+SELECT * FROM consumercomplaint WHERE date_received='06/13/2013';
+
+SELECT date_received, product, issue, company, state, submitted_via FROM consumercomplaint WHERE issue LIKE 'Credit%' AND date_received BETWEEN '06/13/2013' AND '09/24/2013';
+
+SELECT COUNT(*) FROM   employees AS Total_Employees,
+
+SELECT COUNT(*) AS "Bank Issues" FROM consumercomplaint WHERE product= 'Credit card';
+
+SELECT COUNT(*) AS "Timely Respondent" FROM consumercomplaint WHERE timely_response= 'Yes';
