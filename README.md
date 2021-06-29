@@ -1,6 +1,8 @@
 # Analysing-Consumer-Complaints-using-Amazon-Athena
 
 ## Business Use Case (Situation)
+
+### This project used Amazon Athena, AWS Glue and Amazon S3 ### 
 In this project I case of a customer support working in a multinational company which offer services to different states and countries. To improve customer engagements, enhance consumer trust and minimize customer churn, the head of data analytics asks me to perform SQL Query analysis on consumer_complaints data archived in Amazon S3. 
 
 In the project I assumed the role of a Data Scientist, Business Intelligence Analyst or even a Data Analyst. The business question was to answer 6 questions using Amazon Athena query editor using the US_consumer_complaints data which is available at Kaggle. 
